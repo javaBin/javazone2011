@@ -29,7 +29,7 @@ password=<your ldap password>
 
     "no.arktekk.atom-client" %% "atom-client-lift" % "1.0-SNAPSHOT" /*withSources()*/,
 
-    "org.slf4j" % "slf4j-log4j12" % "1.6.1" withSources(),
+    "org.slf4j" % "slf4j-log4j12" % "1.6.1",
 
     "org.scala-tools.testing" %% "specs" % "1.6.5" % "test" withSources(),
     "org.mortbay.jetty" % "jetty" % "6.1.22" % "test->default" withSources(),
