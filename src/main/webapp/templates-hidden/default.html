@@ -1,15 +1,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:lift="http://liftweb.net/">
 	<head>
 		<title>JavaZone 2010</title>
-		<link rel="stylesheet" href="/css/stylesheet_2010.css" media="all"/>
+		<link rel="stylesheet" href="/css/stylesheet_2011.css" media="all"/>
 		<link rel="stylesheet" href="http://jz10.java.no/lib/jquery/jquery.twitter.css" media="all"/>
 		<link rel="stylesheet" href="http://jz10.java.no/lib/jquery/jquery.lightbox-0.5.css" media="all"/>
-        <!--
-        <link rel="stylesheet" href="style/stylesheet_2010.css" media="all"/>
-        <link rel="stylesheet" href="lib/jquery/jquery.twitter.css" media="all"/>
-        <link rel="stylesheet" href="lib/jquery/jquery.lightbox-0.5.css" media="all"/>
-        -->
-		<link href="http://jz10.java.no/atom.xml" title="JavaZone nyheter" type="application/atom+xml" rel="alternate"/>
+		<link href="http://jz11.java.no/atom.xml" title="JavaZone nyheter" type="application/atom+xml" rel="alternate"/>
 		<script type="text/javascript">
 
 		var _gaq = _gaq || [];
@@ -22,11 +17,11 @@
 			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 		})();
 		</script>
-        <base/>
+				<base/>
 	</head>
 	<body>
 		<div id="header" class="center">
-			<a title="Javazone - Forsiden" href="/"><img src="http://jz10.java.no/style/gfx/logo.png" alt="Javazone 2010" title="Javazone - Forsiden" /></a>
+			<a class="logo" title="Javazone - Forsiden" href="/"><img src="http://jz11.java.no/images/jz11_logo.png" alt="Javazone 2010" title="Javazone - Forsiden" class="logo"/></a>
 			<div class="searchfield">
 				<form action="" method="" name="search">
 					<input type="text" name="searchword" id="searchword" />
@@ -35,44 +30,20 @@
 			</div>
 		</div>
 		<div id="mainmenu">
-            <lift:jz.topPages/>
+			<lift:jz.topPages/>
 		</div>
-		<div id="greyfield">
-			<div id="greyfield_content">
-				<img src="http://jz10.java.no/images/newjavazone.png" style="float:left;margin:30px 0 0 0" alt="New Javazone" />
-				<img src="http://jz10.java.no/images/foredragsholdere.png" style="float:left;" alt="Foredragsholdere" />
-				<div id="submenu">
-                    <!--
-					<span>Next happenings</span>
-					<hr />
-					<ul>
-						<li>&raquo;&nbsp;<a href="http://wiki.java.no/">TBA: Last JZ10 Weekend Workshop before summer</a></li>
-						<li>&raquo;&nbsp;<a href="partners.html">TBA: Partner meeting</a></li>
-						<li>&raquo;&nbsp;<a href="program.html">TBA: Announce program</a></li>
-					</ul>
-					<hr />
-                    -->
-				</div>
-			</div>
-		</div>
+
+		<lift:embed what="templates/_banner" />
+
 		<div id="content">
-			<lift:bind name="content"/>
-			<div id="blog">
-	  			<h2>
-					JavaBlog
-					<span class="follow">
-						<img src="http://jz10.java.no/style/gfx/folg_oss.png" /><a href="http://www.facebook.com/group.php?gid=91662203099"><img src="http://jz10.java.no/style/gfx/facebook.png" alt="Facebook" /></a><a href="http://twitter.com/javazone"><img src="http://jz10.java.no/style/gfx/twitter.png" alt="Twitter" /></a>
-					</span>
-				</h2>
-				<div id="twitter">
-				  <p><a href="http://twitter.com/javazone">http://twitter.com/javazone</a></p>
-				</div>
-			</div>
+			<lift:bind name="content" />
+			<lift:embed what="templates/_sidebar" />
 		</div>
         <p>&nbsp;</p>
 		<div id="footer">
 			<p class="small">JavaZone.no - shipped in cooperation with <a href="http://www.bekk.no/" alt="bekk.no">BEKK</a>. Header photos by <a href="http://www.fotogal.no/" alt="fotogal.no">Andre Eide</a>. (All images are Creative Commons BY-SA 2.0 Licensed)</p>
 		</div>
+
 		<script type="text/javascript" src="http://jz10.java.no/lib/jquery/jquery-1.3.2.min.js"></script>
 		<script type="text/javascript" src="http://jz10.java.no/lib/jquery/jquery.twitter.js"></script>
 		<script type="text/javascript" src="http://jz10.java.no/lib/jquery/jquery.lightbox-0.5.min.js"></script>
@@ -101,7 +72,6 @@
 				});
 			});
 		</script>
-		<script type="text/javascript" src="http://jz10.java.no/js/disqus.js">
-		</script>
+		<script type="text/javascript" src="http://jz10.java.no/js/disqus.js"></script>
 	</body>
 </html>
