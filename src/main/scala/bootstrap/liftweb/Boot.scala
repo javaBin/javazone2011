@@ -11,6 +11,8 @@ import no.arktekk.cms.{Logger => CmsLogger, _}
 import no.arktekk.push._
 import scala.util.Random
 import net.liftweb.sitemap.Loc._
+import no.javabin.atom2twitterpublish.Atom2TwitterSync
+import java.util.concurrent.ScheduledFuture
 
 class Boot {
   def boot {
@@ -83,6 +85,30 @@ class Boot {
 
     val pshbLift = new PubsubhubbubSubscriberLift(cmsLogger, pubsubhubbub)
     LiftRules.statelessDispatchTable.append(pshbLift.dispatch)
+
+    if (Props.get("atomtwitterfeed_enabled").map(_.toBoolean).openOr(true)) {
+      def mandatoryProperty(propertyName: String): String = Props.get(propertyName).openOr(error("Property not found " + propertyName))
+      val logger = Logger("atom2twittersync")
+      var atom2TwitterSync = new Atom2TwitterSync(
+        mandatoryProperty("atomtwitterfeed_atom_uri"),
+        mandatoryProperty("atomtwitterfeed_application_id"),
+        mandatoryProperty("atomtwitterfeed_consumer_key"),
+        mandatoryProperty("atomtwitterfeed_consumer_secret"),
+        mandatoryProperty("atomtwitterfeed_access_token"),
+        mandatoryProperty("atomtwitterfeed_access_secret"),
+        mandatoryProperty("atomtwitterfeed_twitter_handle"),
+        (msg, maybExc) => maybExc.map(exc => logger.error(msg, exc)).getOrElse(logger.error(msg)), logger.info(_))
+      import Helpers._
+      var timeSpan = TimeSpan(Props.get("atomtwitterfeed_update_ms").map(_.toLong).openOr(60 seconds))
+      var future: Option[ScheduledFuture[Unit]] = None
+      def start: ScheduledFuture[Unit] = ActorPing.schedule({
+        () =>
+          atom2TwitterSync ! Atom2TwitterSync.Check
+          future = Some(start)
+      }, timeSpan)
+      future = Some(start)
+      LiftRules.unloadHooks.prepend(() => future.foreach(_.cancel(false)))
+    }
   }
 
   val news = ParsePath(List("news"), "", true, false);
