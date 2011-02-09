@@ -1,3 +1,10 @@
+/*
+Colors
+text:             #b6b2b5
+main background:  #202020
+links and h1:     #eb0c8b
+lines and header: #303030
+*/
 /* ################## */
 /* RESET              */
 /* ################## */
@@ -247,29 +254,26 @@ div#mainmenu .active a {
 
 div#submenu {
 	color: #b6b2b5;
-	float: left;
-	margin: 20px 0 0 20px;
-	width: 350px;
+	margin: 16px 0;
+	width: 100%;
+	height: 33px;
+	border-top: 1px solid #303030;
+	border-bottom: 1px solid #303030;
 }
 
 div#submenu {
-	font-family: Georgia, "Times New Roman", Times, serif;
-	font-style: italic;
-	font-size: 1.4em;
-}
-
-div#submenu span {
-	font-weight: bold;
-	color: #b6b2b5;
+	font: italic 14px Helvetica Neue, Helvetica, Verdana, Arial, sans-serif;
 }
 
 div#submenu a {
-	line-height: 1.6em;
-	color: #b6b2b5;
+	font: normal lighter 14px Helvetica Neue, Helvetica, Verdana, Arial, sans-serif;
+	line-height: 2;
+	color: #eb0c8b;
 }
 
 div#submenu a:hover {
-	color: #b6b2b5;
+	color: #eb0c8b;
+	text-decoration: underline;
 }
 
 div#submenu ul {
@@ -282,14 +286,6 @@ div#submenu li {
 	list-style-position: inside;
 }
 
-div#submenu hr {
-	color: #b6b2b5;
-	margin: 10px 0;
-	border: 0;
-	background-color: #818989;
-	height: 1px;
-}
-
 div#content {
 /*margin: 0 auto;*/
 	width: 1007px;
@@ -299,10 +295,6 @@ div#news {
 	float: left;
 	margin: 0 30px 0 0;
 	width: 638px;
-}
-
-div#news h1 {
-/*margin: 0;*/
 }
 
 div#news .newsframe:first-of-type {
@@ -334,23 +326,21 @@ div#sidebar {
 	width: 338px;
 }
 
-div#sidebar h1 {
+div#sidebar h2 {
 	padding: 0;
-	margin: 0 0 1px 0;
+	margin: 0;
 	border: none;
 	width: 100%;
 }
 
-div#sidebar h1 .follow {
+div#sidebar h2 .follow {
+	float: right;
 	margin: 0;
-
-	font-size: 9px;
-	font-weight: normal;
-	font-style: italic;
+	font: italic 8/9px;
 	color: #b6b2b5;
 }
 
-/* wp-stuff */
+/* misc */
 
 .timestamp {
 	font-size: 0.7em;
@@ -384,6 +374,8 @@ hr {
 	padding: 0;
 	display: none;
 }
+
+.clearfix { display: block; }
 
 /* ################## */
 /* TWITTER            */

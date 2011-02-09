@@ -6,23 +6,30 @@
 		<base/>
 	</head>
 	<body>
-		<div id="header" class="center">
-			<div id="header-content">
-				<a class="logo" title="Javazone - Forsiden" href="/"><img src="/images/jz11_logo.png" alt="Javazone 2010" title="Javazone - Forsiden" class="logo"/></a>
-				<div id="mainmenu">
-					<lift:jz.topPages/>
+
+		<div id="wrapper" class="clearfix">
+			<div id="header" class="center">
+				<div id="header-content">
+					<a class="logo" title="Javazone - Forsiden" href="/"><img src="/images/jz11_logo.png" alt="Javazone 2010" title="Javazone - Forsiden" class="logo"/></a>
+					<div id="mainmenu">
+						<lift:jz.topPages/>
+					</div>
 				</div>
+			</div>
+
+			<lift:embed what="templates/_banner" />
+
+			<div id="content" class="clearer">
+				<lift:bind name="content" />
+				<lift:embed what="templates/_sidebar" />
 			</div>
 		</div>
 
-		<lift:embed what="templates/_banner" />
-
-		<div id="content">
-			<lift:bind name="content" />
-			<lift:embed what="templates/_sidebar" />
-			<div id="footer">
-				<p class="small">JavaZone.no - shipped in cooperation with <a href="http://www.bekk.no/" alt="bekk.no">BEKK</a>. Header photos by <a href="http://www.fotogal.no/" alt="fotogal.no">Andre Eide</a>. (All images are Creative Commons BY-SA 2.0 Licensed)</p>
-			</div>
+		<div id="footer">
+			<p class="small">JavaZone.no - shipped in cooperation with
+				<a href="http://www.bekk.no/" alt="bekk.no">BEKK</a>. Header photos by
+				<a href="http://www.fotogal.no/" alt="fotogal.no">Andre Eide</a>. (All images are Creative Commons BY-SA 2.0 Licensed)
+			</p>
 		</div>
 
 
