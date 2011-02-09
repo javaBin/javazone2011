@@ -163,11 +163,11 @@ div#mainmenu li {
 	background: url(/css/gfx/menu-inactive.png) no-repeat left bottom;
 }
 
-div#mainmenu li:first-of-type {
+div#mainmenu li:first-child {
 	background: transparent;
 }
 
-div#mainmenu li:hover:first-of-type {
+div#mainmenu li:hover:first-child {
 	background: url(/css/gfx/menu-active-first.png) no-repeat left bottom;
 }
 
@@ -294,7 +294,7 @@ div#footer li {
 	padding: 0 15px 0 16px;
 }
 
-div#footer li:first-of-type {
+div#footer li:first-child {
 	padding: 0 15px 0 0;
 	background: transparent;
 }
@@ -356,7 +356,7 @@ div#submenu li {
 	margin: 0;
 }
 
-div#submenu li:first-of-type {
+div#submenu li:first-child {
 	background: transparent;
 }
 
@@ -370,7 +370,7 @@ div#news {
 	width: 623px;
 }
 
-div#news .newsframe:first-of-type {
+div#news .newsframe:first-child {
 	border: none;
 }
 
