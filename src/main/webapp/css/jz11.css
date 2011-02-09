@@ -239,6 +239,19 @@ div#mainmenu .active a {
 	float: left;
 }
 
+/* ################## */
+/* CONTENT            */
+/* ################## */
+div#wrapper {
+	/*position: absolute;*/
+	margin: 0 auto;
+}
+
+div#content {
+	margin: 0 auto;
+	width: 1007px;
+}
+
 #content {
 	position: relative;
 	top: 489px;
@@ -247,9 +260,55 @@ div#mainmenu .active a {
 	text-align: left;
 }
 
-/* ################## */
-/* CONTENT            */
-/* ################## */
+/* Footer. Needs some luv */
+
+div#footer-container {
+	position: relative;
+	top: 1650px;
+	padding-bottom: 10px;
+}
+
+div#footer {
+	font: normal lighter 14px Helvetica Neue, Helvetica, Verdana, Arial, sans-serif;
+	color: #656565;
+	margin: 16px auto;
+	width: 1007px;
+	height: 33px;
+	border-top: 1px solid #303030;
+	border-bottom: 1px solid #303030;
+}
+
+div#footer ul {
+	position: absolute;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	overflow: hidden;
+}
+
+div#footer li {
+	display: block;
+	line-height: 32px;
+	float: left;
+	margin: 0;
+	padding: 0 15px 0 16px;
+}
+
+div#footer li:first-of-type {
+	padding: 0 15px 0 0;
+	background: transparent;
+}
+
+div#footer img {
+	padding: 0 0 0 9px;
+}
+
+div#footer li {
+	background: url(/css/gfx/submenu-split.png) no-repeat left center;
+}
+
+
+/* submenu */
 
 div#submenu {
 	color: #b6b2b5;
@@ -303,11 +362,6 @@ div#submenu li:first-of-type {
 
 div#submenu li {
 	background: url(/css/gfx/submenu-split.png) no-repeat left center;
-}
-
-div#content {
-/*margin: 0 auto;*/
-	width: 1007px;
 }
 
 div#news {
