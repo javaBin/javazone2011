@@ -1,36 +1,18 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:lift="http://liftweb.net/">
 	<head>
 		<title>JavaZone 2010</title>
-		<link rel="stylesheet" href="/css/stylesheet_2011.css" media="all"/>
-		<link rel="stylesheet" href="http://jz10.java.no/lib/jquery/jquery.twitter.css" media="all"/>
-		<link rel="stylesheet" href="http://jz10.java.no/lib/jquery/jquery.lightbox-0.5.css" media="all"/>
+		<link rel="stylesheet" href="/css/jz11.css" media="all"/>
 		<link href="http://jz11.java.no/atom.xml" title="JavaZone nyheter" type="application/atom+xml" rel="alternate"/>
-		<script type="text/javascript">
-
-		var _gaq = _gaq || [];
-		_gaq.push(['_setAccount', 'UA-3676724-3']);
-		_gaq.push(['_trackPageview']);
-
-		(function() {
-			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-		})();
-		</script>
-				<base/>
+		<base/>
 	</head>
 	<body>
 		<div id="header" class="center">
-			<a class="logo" title="Javazone - Forsiden" href="/"><img src="http://jz11.java.no/images/jz11_logo.png" alt="Javazone 2010" title="Javazone - Forsiden" class="logo"/></a>
-			<div class="searchfield">
-				<form action="" method="" name="search">
-					<input type="text" name="searchword" id="searchword" />
-					<input type="submit" value="" id="submitsearch" />
-				</form>
+			<div id="header-content">
+				<a class="logo" title="Javazone - Forsiden" href="/"><img src="/images/jz11_logo.png" alt="Javazone 2010" title="Javazone - Forsiden" class="logo"/></a>
+				<div id="mainmenu">
+					<lift:jz.topPages/>
+				</div>
 			</div>
-		</div>
-		<div id="mainmenu">
-			<lift:jz.topPages/>
 		</div>
 
 		<lift:embed what="templates/_banner" />
@@ -38,13 +20,13 @@
 		<div id="content">
 			<lift:bind name="content" />
 			<lift:embed what="templates/_sidebar" />
-		</div>
-        <p>&nbsp;</p>
-		<div id="footer">
-			<p class="small">JavaZone.no - shipped in cooperation with <a href="http://www.bekk.no/" alt="bekk.no">BEKK</a>. Header photos by <a href="http://www.fotogal.no/" alt="fotogal.no">Andre Eide</a>. (All images are Creative Commons BY-SA 2.0 Licensed)</p>
+			<div id="footer">
+				<p class="small">JavaZone.no - shipped in cooperation with <a href="http://www.bekk.no/" alt="bekk.no">BEKK</a>. Header photos by <a href="http://www.fotogal.no/" alt="fotogal.no">Andre Eide</a>. (All images are Creative Commons BY-SA 2.0 Licensed)</p>
+			</div>
 		</div>
 
-		<script type="text/javascript" src="http://jz10.java.no/lib/jquery/jquery-1.3.2.min.js"></script>
+
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
 		<script type="text/javascript" src="http://jz10.java.no/lib/jquery/jquery.twitter.js"></script>
 		<script type="text/javascript" src="http://jz10.java.no/lib/jquery/jquery.lightbox-0.5.min.js"></script>
 		<script type="text/javascript">
@@ -64,14 +46,22 @@
 					$('a.lightbox').lightBox(); // Select all links with lightbox class
 				});
 				$('a.main-menu').each(function () {
-
 					if(window.location.href.indexOf($(this).attr('href')) > 0) {
-						console.log('YAY: ' + window.location.href + ' href: ' + $(this).attr('href'));
 						$(this).parent().addClass('active');
 					}
 				});
 			});
 		</script>
-		<script type="text/javascript" src="http://jz10.java.no/js/disqus.js"></script>
+		<script type="text/javascript" src="/js/disqus.js"></script>
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-3676724-3']);
+			_gaq.push(['_trackPageview']);
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
 	</body>
 </html>

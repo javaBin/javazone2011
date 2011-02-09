@@ -27,7 +27,7 @@ class NewsSnippets(cmsClient: CmsClient, offset: Option[Int], limit: Positive) e
       {entry.updatedOrPublished.map(date => <span class="timestamp">{postDateTimeFormatter.print(date)}</span>).getOrElse(NodeSeq.Empty)}
       <div class="expand_newsframe">
           <a href={ "/news/" + entry.slug + ".html" }>
-            <img src="/permalink.gif" alt="co" title="Contract"/>
+            <img src="/permalink.png" alt="co" title="Contract"/>
           </a>
       </div>
       <h2>{entry.title}</h2>
