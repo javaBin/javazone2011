@@ -97,7 +97,7 @@ h1 {
 }
 
 h2 {
-	font: lighter 32px/34px Helvetica Neue, Helvetica, Verdana, Arial, sans-serif;
+	font: lighter 28px/30px Helvetica Neue, Helvetica, Verdana, Arial, sans-serif;
 	padding: 20px 0;
 }
 
@@ -115,7 +115,7 @@ a:hover {
 }
 
 p {
-	margin-bottom: 1.2em;
+	margin-bottom: 18px;
 }
 
 /* ################## */
@@ -196,7 +196,6 @@ div#mainmenu .active a {
 	position: absolute;
 	width: 100%;
 	overflow: hidden;
-
 }
 
 #banner-content {
@@ -329,21 +328,28 @@ div#sidebar {
 div#sidebar h2 {
 	padding: 0;
 	margin: 0;
+
+	padding-bottom: 12px;
+	margin-bottom: 22px;
+
+	color: #eb0c8b;
 	border: none;
 	width: 100%;
 }
 
 div#sidebar h2 .follow {
+	padding-top: 14px;
 	float: right;
 	margin: 0;
-	font: italic 8/9px;
+	font: lighter italic 12px/14px Helvetica Neue, Helvetica, Verdana, Arial, sans-serif;
 	color: #b6b2b5;
 }
 
 /* misc */
 
 .timestamp {
-	font-size: 0.7em;
+	font-size: 12px;
+	font-style: italic;
 }
 
 .italic {
@@ -430,10 +436,7 @@ hr {
 }
 
 .twitted p.profileLink {
-	display: block;
-	margin: 0;
-	padding: 0 1em;
-	color: #fff;
+	display: none;
 }
 
 /* ################## */
