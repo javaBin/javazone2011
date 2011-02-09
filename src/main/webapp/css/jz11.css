@@ -261,13 +261,21 @@ div#submenu {
 }
 
 div#submenu {
-	font: italic 14px Helvetica Neue, Helvetica, Verdana, Arial, sans-serif;
+}
+
+div#submenu span {
+	display: block;
+	float: left;
+	padding-top: 8px;
+	margin-right: 8px;
+	font: italic lighter 14px Helvetica Neue, Helvetica, Verdana, Arial, sans-serif;
 }
 
 div#submenu a {
 	font: normal lighter 14px Helvetica Neue, Helvetica, Verdana, Arial, sans-serif;
 	line-height: 2;
 	color: #eb0c8b;
+	padding: 0 15px 0 16px;
 }
 
 div#submenu a:hover {
@@ -278,11 +286,23 @@ div#submenu a:hover {
 div#submenu ul {
 	padding: 0;
 	margin: 0;
+	list-style: none;
+	overflow: hidden;
 }
 
 div#submenu li {
-	list-style-type: none;
-	list-style-position: inside;
+	display: block;
+	line-height: 32px;
+	float: left;
+	margin: 0;
+}
+
+div#submenu li:first-of-type {
+	background: transparent;
+}
+
+div#submenu li {
+	background: url(/css/gfx/submenu-split.png) no-repeat left center;
 }
 
 div#content {
