@@ -292,8 +292,8 @@ div#content {
 
 div#news {
 	float: left;
-	margin: 0 30px 0 0;
-	width: 638px;
+	margin: 0 45px 0 0;
+	width: 623px;
 }
 
 div#news .newsframe:first-of-type {
@@ -307,7 +307,7 @@ div#news .newsframe {
 }
 
 div#news .newsframe h2 {
-	width: 550px;
+	width: 623px;
 }
 
 div#news .newsframe div img {
@@ -326,11 +326,8 @@ div#sidebar {
 }
 
 div#sidebar h2 {
-	padding: 0;
-	margin: 0;
-
-	padding-bottom: 12px;
-	margin-bottom: 22px;
+	padding: 14px 0 10px 0;
+	margin: 0 0 7px 0;
 
 	color: #eb0c8b;
 	border: none;
@@ -372,7 +369,7 @@ p.small {
 
 div#news .expand_newsframe {
 	float: right;
-	margin: 20px 15px 0 0;
+	margin: 20px 0 0 0;
 }
 
 hr {
