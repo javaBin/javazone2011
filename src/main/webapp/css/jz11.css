@@ -167,11 +167,11 @@ div#mainmenu li:first-child {
   background: transparent;
 }
 
-div#mainmenu li:hover:first-child {
+div#mainmenu li:hover:first-child, div#mainmenu li.active:first-child {
   background: url(/css/gfx/menu-active-first.png) no-repeat left bottom;
 }
 
-div#mainmenu li:hover {
+div#mainmenu li:hover, div#mainmenu li.active {
   background: url(/css/gfx/menu-active.png) no-repeat left bottom;
 }
 
@@ -237,6 +237,22 @@ div#mainmenu .active a {
 
 #banner-content .message.left {
   float: left;
+}
+
+.btn-nav {
+  cursor: pointer;
+}
+
+#banner #prev {
+  position: absolute;
+  left: 0;
+  top: 188px;
+}
+
+#banner #next {
+  position: absolute;
+  right: 0;
+  top: 188px;
 }
 
 /* ################## */
@@ -360,6 +376,11 @@ div#main {
   float: left;
   margin: 0 45px 0 0;
   width: 623px;
+}
+
+div#main ol, div#main ul {
+  list-style: inside circle;
+  margin-bottom: 18px;
 }
 
 div#main .newsframe:first-child {

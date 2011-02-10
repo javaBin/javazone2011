@@ -16,7 +16,7 @@ class JavaZonePagesSnippet(val cmsClient: CmsClient) extends DispatchSnippet {
   def topPages(body: NodeSeq): NodeSeq = {
     <ul>
       <li>
-        <a href="/">News</a>
+        <a href="/news.html">News</a>
       </li>
       {NodeSeq.fromSeq(cmsClient.getTopPages.map(pageToLi))}
     </ul>
