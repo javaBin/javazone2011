@@ -14,7 +14,7 @@ class StaticPageSnippets(cmsClient: CmsClient) extends DispatchLocSnippets with 
         entry <- Box(cmsClient.getPageBySlug(slug))
       } yield {
         <xml:group>
-          <h2>{entry.title}</h2>
+          <h1>{entry.title}</h1>
           <div>{entry.content}</div>
         </xml:group>
       }).openOr(NodeSeq.Empty)
