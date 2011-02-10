@@ -243,18 +243,13 @@ div#mainmenu .active a {
 /* CONTENT            */
 /* ################## */
 div#wrapper {
-/*position: absolute;*/
   margin: 0 auto;
 }
 
 div#content {
-  margin: 0 auto;
-  width: 1007px;
-}
-
-#content {
   position: relative;
   top: 489px;
+  width: 1007px;
   margin: 0 auto;
   min-height: 100%;
   text-align: left;
@@ -266,6 +261,7 @@ div#footer-container {
   position: relative;
   top: 479px;
   padding-bottom: 1px;
+  width: 100%;
 }
 
 div#footer {
@@ -316,9 +312,6 @@ div#submenu {
   height: 33px;
   border-top: 1px solid #303030;
   border-bottom: 1px solid #303030;
-}
-
-div#submenu {
 }
 
 div#submenu span {
@@ -399,14 +392,13 @@ div#main .expand_newsframe {
 }
 
 div#sidebar {
-  float: left;
-  width: 338px;
+  float: right;
+  width: 328px;
 }
 
 div#sidebar h2 {
   padding: 14px 0 10px 0;
   margin: 0 0 7px 0;
-
   color: #eb0c8b;
   border: none;
   width: 100%;
