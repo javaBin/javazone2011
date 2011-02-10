@@ -364,34 +364,39 @@ div#submenu li {
 	background: url(/css/gfx/submenu-split.png) no-repeat left center;
 }
 
-div#news {
+div#main {
 	float: left;
 	margin: 0 45px 0 0;
 	width: 623px;
 }
 
-div#news .newsframe:first-child {
+div#main .newsframe:first-child {
 	border: none;
 }
 
-div#news .newsframe {
+div#main .newsframe {
 	border-bottom: 1px solid #303030;
 	padding: 3px 0 0 0;
 	color: #b6b2b5;
 }
 
-div#news .newsframe h2 {
+div#main .newsframe h2 {
 	width: 623px;
 }
 
-div#news .newsframe div img {
+div#main .newsframe div img {
 	padding-right: 5px;
 	padding-bottom: 5px;
 }
 
-div#news .newsframe.partners * {
+div#main .newsframe.partners * {
 	margin: 0;
 	padding: 0;
+}
+
+div#main .expand_newsframe {
+	float: right;
+	margin: 20px 0 0 0;
 }
 
 div#sidebar {
@@ -439,11 +444,6 @@ p.small {
 
 	color: #333333;
 	padding: 3px 0;
-}
-
-div#news .expand_newsframe {
-	float: right;
-	margin: 20px 0 0 0;
 }
 
 hr {
