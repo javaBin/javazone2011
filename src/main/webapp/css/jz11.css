@@ -451,6 +451,8 @@ p.small {
   color: #b6b2b5;
 }
 
+p.ingress { font-size: 22px; }
+
 .accent {
   background-color: #ebffff;
 
