@@ -264,7 +264,7 @@ div#content {
 
 div#footer-container {
   position: relative;
-  top: 1650px;
+  top: 479px;
   padding-bottom: 10px;
 }
 
@@ -451,9 +451,25 @@ hr {
   display: none;
 }
 
-.clearfix {
+/* ******************************************************************** */
+/* Clearfix: http://csscreator.com/attributes/containedfloat.php        */
+/* ******************************************************************** */
+.clearfix:after {
+  content: ".";
   display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
 }
+
+.clearfix {
+  display: inline-block;
+}
+
+/* Hides from IE-mac \*/
+* html .clearfix{height: 1%;}
+.clearfix{display: block;}
+/* End hide from IE-mac */
 
 /* ################## */
 /* TWITTER            */
