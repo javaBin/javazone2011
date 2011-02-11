@@ -28,7 +28,7 @@ var disqus_developer = 0; // Set to 1 for local debugging
 /* google analytics */
 
 var _gaq = _gaq || [];
-_gaq.push(['_setAccount', 'UA-3676724-3']);
+_gaq.push(['_setAccount', 'UA-3676724-4']);
 _gaq.push(['_trackPageview']);
 
 (function() {
