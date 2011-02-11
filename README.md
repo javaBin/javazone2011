@@ -8,7 +8,8 @@ user=[your ldap username]
 password=[your ldap password]
 </pre>
 
-Add something like the following to <code>~/.cms/config.properties</code>:
+The portal uses PubSubHubBub atom-client, which assumes a configuration file <code>~/.cms/config.properties</code> with content like:
+
 <pre>
 serviceUrl=http://wp.java.no/?atompub=service
 workspace=javazone11 Workspace

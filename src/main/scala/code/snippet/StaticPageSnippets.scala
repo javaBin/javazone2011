@@ -14,7 +14,7 @@ class StaticPageSnippets(cmsClient: CmsClient) extends DispatchLocSnippets with 
         entry <- Box(cmsClient.getPageBySlug(slug))
       } yield {
         <xml:group>
-          <h2>{entry.title}</h2>
+          <h1>{entry.title}</h1>
           <div>{entry.content}</div>
         </xml:group>
       }).openOr(NodeSeq.Empty)
@@ -35,11 +35,15 @@ class StaticPageSnippets(cmsClient: CmsClient) extends DispatchLocSnippets with 
       (for {
         slug <- S.param("slug").map(CmsSlug.fromString)
         list <- cmsClient.getChildrenOf(slug)
+        if !list.isEmpty
       } yield {
         <xml:group>
-          <ul>
-            {list.map(entry => JavaZonePagesSnippet.pageToLi(entry))}
-          </ul>
+          <div id="submenu">
+            <span>Content:</span>
+            <ul>
+              {list.map(entry => JavaZonePagesSnippet.pageToLi(entry))}
+            </ul>
+          </div>
         </xml:group>
       }).openOr(NodeSeq.Empty)
   }

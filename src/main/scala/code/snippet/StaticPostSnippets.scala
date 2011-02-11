@@ -5,10 +5,6 @@ import xml.NodeSeq
 import net.liftweb.http.S
 import no.arktekk.cms.{CmsSlug, CmsClient}
 
-/**
- * @author Thor Åge Eldby (thoraageeldby@gmail.com)
- */
-
 class StaticPostSnippets(cmsClient: CmsClient) extends DispatchLocSnippets {
   def dispatch: PartialFunction[String, NodeSeq => NodeSeq] = {
     case "page" => _ =>
