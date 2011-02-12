@@ -89,7 +89,7 @@ class Boot {
     if (Props.get("atomtwitterfeed_enabled").map(_.toBoolean).openOr(true)) {
       def mandatoryProperty(propertyName: String): String = Props.get(propertyName).openOr(error("Property not found " + propertyName))
       val logger = Logger("atom2twittersync")
-      var atom2TwitterSync = new Atom2TwitterSync(
+      val atom2TwitterSync = new Atom2TwitterSync(
         mandatoryProperty("atomtwitterfeed_atom_uri"),
         mandatoryProperty("atomtwitterfeed_application_id"),
         mandatoryProperty("atomtwitterfeed_consumer_key"),
@@ -99,7 +99,7 @@ class Boot {
         mandatoryProperty("atomtwitterfeed_twitter_handle"),
         (msg, maybExc) => maybExc.map(exc => logger.error(msg, exc)).getOrElse(logger.error(msg)), logger.info(_))
       import Helpers._
-      var timeSpan = TimeSpan(Props.get("atomtwitterfeed_update_ms").map(_.toLong).openOr(60 seconds))
+      val timeSpan = TimeSpan(Props.get("atomtwitterfeed_update_ms").map(_.toLong).openOr(60 seconds))
       var future: Option[ScheduledFuture[Unit]] = None
       def start: ScheduledFuture[Unit] = ActorPing.schedule({
         () =>
