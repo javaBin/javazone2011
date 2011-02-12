@@ -69,11 +69,24 @@ $(document).ready(function() {
   });
 
   /* banner navigation */
-    $('#prev').click(function() {
+  $('#prev').click(function() {
     console.log('prev');
   });
   $('#next').click(function() {
     console.log('next');
   });
 
+  /* Sort partner logos */
+  var partnerLogos = $("#partner-logos");
+  var elems = partnerLogos.children("a");
+
+  if(elems.size() > 0) {
+    elems.sort(function() { return (Math.round(Math.random())-0.5); });
+
+    partnerLogos.children().remove();
+
+    for (var i = 0; i < elems.length; i++) {
+      partnerLogos.append(elems[i]);
+    }
+  }
 });
