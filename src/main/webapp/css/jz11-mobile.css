@@ -1,0 +1,9 @@
+div#header { min-width: 84px; width: 100%; margin: 0;}
+div#header-content { display:block; width: 100%; }
+div#header-content img { margin-left: 15px; }
+div#header-content div#mainmenu { clear: both; float: left; margin: 0; }
+div#banner { display: none; }
+div#content { top: 0; max-width: 96%; padding: 0 2%;}
+div#main { float: left; width: 100%;}
+div#sidebar { float: left; max-width: 328px; }
+div#footer { width: 98%; top: 0;}
