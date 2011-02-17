@@ -68,14 +68,6 @@ $(document).ready(function() {
     }
   });
 
-  /* banner navigation */
-  $('#prev').click(function() {
-    console.log('prev');
-  });
-  $('#next').click(function() {
-    console.log('next');
-  });
-
   /* Sort partner logos */
   var partnerLogos = $("#partner-logos");
   var elems = partnerLogos.children("a");
@@ -89,4 +81,36 @@ $(document).ready(function() {
       partnerLogos.append(elems[i]);
     }
   }
+
+  /* banner navigation - hackaround until we implement a proper carousel */
+  var IMG_WIDTH = 1183;
+  var position = 2;
+  var images = $("#banner-content .images li");
+  var marginLeft = parseInt($("#banner-content").css("margin-left"));
+
+  $("#banner-content").
+      css("width", (images.length * IMG_WIDTH) + "px").
+      css("margin-left", marginLeft - IMG_WIDTH + "px");
+
+
+  $('#prev').click(function() {
+    position--;
+    if (position == 1) $("#prev").fadeOut();
+    $("#next").fadeIn();
+
+    $('#banner-content').animate({
+      left: '+=' + IMG_WIDTH
+    }, 1000);
+    
+  });
+  $('#next').click(function() {
+    position++;
+    if (position == 3) $("#next").fadeOut();
+    $("#prev").fadeIn();
+
+    $('#banner-content').animate({
+      left: '-=' + IMG_WIDTH
+    }, 1000);
+  });
+
 });
