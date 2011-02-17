@@ -1,7 +1,6 @@
 package bootstrap.liftweb
 
 import code.snippet._
-import java.io.File
 import java.net.URL
 import net.liftweb.common._
 import net.liftweb.http._
@@ -13,10 +12,17 @@ import scala.util.Random
 import net.liftweb.sitemap.Loc._
 import no.javabin.atom2twitterpublish.Atom2TwitterSync
 import java.util.concurrent.ScheduledFuture
+import java.io.{FileInputStream, File}
 
 class Boot {
   def boot {
     LiftRules.configureLogging = LoggingAutoConfigurer()
+
+    val localFile = () => {
+        val file = new File("/opt/jb/jz11/jz11.props")
+      if (file.exists) Full(new FileInputStream(file)) else Empty
+    }
+    Props.whereToLook = () => (("local", localFile) :: Nil)
 
     CmsUtil.skipEhcacheUpdateCheck
 
@@ -99,7 +105,7 @@ class Boot {
         mandatoryProperty("atomtwitterfeed_twitter_handle"),
         (msg, maybExc) => maybExc.map(exc => logger.error(msg, exc)).getOrElse(logger.error(msg)), logger.info(_))
       import Helpers._
-      val timeSpan = TimeSpan(Props.get("atomtwitterfeed_update_ms").map(_.toLong).openOr(60 seconds))
+      val timeSpan = TimeSpan(Props.get("atomtwitterfeed_update_ms").map(_.toLong).openOr(300 seconds))
       var future: Option[ScheduledFuture[Unit]] = None
       def start: ScheduledFuture[Unit] = ActorPing.schedule({
         () =>
