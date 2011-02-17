@@ -19,7 +19,7 @@ class Boot {
     LiftRules.configureLogging = LoggingAutoConfigurer()
 
     val localFile = () => {
-        val file = new File("/opt/jb/jz11/jz11.props")
+        val file = new File("/opt/jb/jz11/etc/jz11.props")
       if (file.exists) Full(new FileInputStream(file)) else Empty
     }
     Props.whereToLook = () => (("local", localFile) :: Nil)
