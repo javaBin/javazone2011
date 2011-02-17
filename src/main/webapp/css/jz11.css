@@ -313,6 +313,7 @@ div#footer li:first-child {
 
 div#footer img {
   padding: 0 0 0 9px;
+  vertical-align: middle;
 }
 
 div#footer li {
