@@ -30,8 +30,9 @@ class JavaZone2011Project(info: ProjectInfo) extends DefaultWebProject(info) wit
     "net.liftweb" %% "lift-util" % liftVersion % "compile->default" withSources(),
 
     "no.javabin" %% "atom2twitterpublisher" % "1.0-SNAPSHOT",
-    "no.arktekk.atom-client" %% "atom-client-lift" % "1.0-SNAPSHOT" /*withSources()*/,
+    "no.arktekk.atom-client" %% "atom-client-lift" % "1.0-SNAPSHOT",
 
+    "log4j" % "log4j" % "1.2.16",
     "org.slf4j" % "slf4j-log4j12" % "1.6.1",
 
     "org.scala-tools.testing" %% "specs" % "1.6.7" % "test" withSources(),
