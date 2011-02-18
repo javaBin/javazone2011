@@ -83,7 +83,7 @@ $(document).ready(function() {
   }
 
   /* banner navigation - hackaround until we implement a proper carousel */
-  var IMG_WIDTH = 1183;
+  /*var IMG_WIDTH = 1183;
   var position = 2;
   var images = $("#banner-content .images li");
   var marginLeft = parseInt($("#banner-content").css("margin-left"));
@@ -111,6 +111,6 @@ $(document).ready(function() {
     $('#banner-content').animate({
       left: '-=' + IMG_WIDTH
     }, 1000);
-  });
+  });*/
 
 });
