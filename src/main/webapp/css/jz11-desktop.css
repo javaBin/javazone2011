@@ -216,12 +216,12 @@ div#submenu li {
 
 #banner img.message {
   position: absolute;
-  z-index: 2;
+  z-index: 1000;
   left: 600px;
 }
 
 #banner img.message.left {
-  float: left;
+  /*float: left;*/
 }
 
 .btn-nav {
