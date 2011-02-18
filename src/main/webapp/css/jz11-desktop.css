@@ -214,12 +214,13 @@ div#submenu li {
   position: absolute;
 }
 
-#banner-content img.message {
+#banner img.message {
+  position: absolute;
   z-index: 2;
   left: 600px;
 }
 
-#banner-content .message.left {
+#banner img.message.left {
   float: left;
 }
 
