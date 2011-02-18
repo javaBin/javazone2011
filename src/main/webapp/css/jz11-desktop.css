@@ -102,7 +102,7 @@ div#submenu li {
 /* BANNER             */
 /* ################## */
 
-#banner {
+/*#banner {
   position: absolute;
   width: 100%;
   overflow: hidden;
@@ -130,18 +130,18 @@ div#submenu li {
   padding: 0;
 }
 
-/*#banner-content .images li.left {*/
-  /*top: 0;*/
-  /*left: -1183px;*/
-  /*display: block;*/
-/*}*/
+#banner-content .images li.left {
+  top: 0;
+  left: -1183px;
+  display: block;
+}
 
-/*#banner-content .images li.right {*/
-  /*left: 1183px;*/
-/*}*/
+#banner-content .images li.right {
+  left: 1183px;
+}
 
 #banner-content img {
-  /*position: absolute;*/
+  position: absolute;
 }
 
 #banner img.message {
@@ -170,4 +170,72 @@ div#submenu li {
   position: absolute;
   right: 0;
   top: 188px;
+}*/
+
+/* ################## */
+/* BANNER             */
+/* ################## */
+
+#banner {
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
 }
+
+#banner-content {
+  top: 84px;
+  height: 459px;
+  width: 1183px;
+  margin: 0 auto;
+}
+
+#banner-content .images {
+  width: 100%;
+  position: relative;
+}
+
+#banner-content .images li {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+}
+
+#banner-content .images li.left {
+  top: 0;
+  left: -1183px;
+  display: block;
+}
+
+#banner-content .images li.right {
+  left: 1183px;
+}
+
+#banner-content img {
+  position: absolute;
+}
+
+#banner-content img.message {
+  z-index: 2;
+  left: 600px;
+}
+
+#banner-content .message.left {
+  float: left;
+}
+
+.btn-nav {
+  cursor: pointer;
+}
+
+#banner #prev {
+  position: absolute;
+  left: 0;
+  top: 188px;
+}
+
+#banner #next {
+  position: absolute;
+  right: 0;
+  top: 188px;
+}
+
