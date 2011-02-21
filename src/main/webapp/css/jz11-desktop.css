@@ -127,13 +127,13 @@ div#submenu li {
   padding: 0;
 }
 
-#banner-content .images li.left {
+#banner-content .images li.prev {
   top: 0;
   left: -1183px;
   display: block;
 }
 
-#banner-content .images li.right {
+#banner-content .images li.next {
   left: 1183px;
 }
 

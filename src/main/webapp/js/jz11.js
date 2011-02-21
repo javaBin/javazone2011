@@ -82,35 +82,25 @@ $(document).ready(function() {
     }
   }
 
-  /* banner navigation - hackaround until we implement a proper carousel */
-  /*var IMG_WIDTH = 1183;
-  var position = 2;
-  var images = $("#banner-content .images li");
-  var marginLeft = parseInt($("#banner-content").css("margin-left"));
-
-  $("#banner-content").
-      css("width", (images.length * IMG_WIDTH) + "px").
-      css("margin-left", marginLeft - IMG_WIDTH + "px");
-
-
+  /* dumb banner carousel*/
   $('#prev').click(function() {
-    position--;
-    if (position == 1) $("#prev").fadeOut();
-    $("#next").fadeIn();
-
-    $('#banner-content').animate({
-      left: '+=' + IMG_WIDTH
-    }, 1000);
-    
+    var slides = $('ol.images');
+    var prev = slides.find('li.prev');
+    var curr = slides.find('li.curr');
+    var next = slides.find('li.next');
+    prev.fadeOut().removeClass().addClass('curr').fadeIn();
+    curr.fadeOut().removeClass().addClass('next').fadeIn();
+    next.fadeOut().removeClass().addClass('prev').fadeIn();
   });
-  $('#next').click(function() {
-    position++;
-    if (position == 3) $("#next").fadeOut();
-    $("#prev").fadeIn();
 
-    $('#banner-content').animate({
-      left: '-=' + IMG_WIDTH
-    }, 1000);
-  });*/
+  $('#next').click(function() {
+    var slides = $('#banner-content');
+    var prev = slides.find('li.prev');
+    var curr = slides.find('li.curr');
+    var next = slides.find('li.next');
+    prev.fadeOut().removeClass().addClass('next').fadeIn();
+    curr.fadeOut().removeClass().addClass('prev').fadeIn();
+    next.fadeOut().removeClass().addClass('curr').fadeIn();
+  });
 
 });
