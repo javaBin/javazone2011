@@ -190,6 +190,7 @@ div#submenu li {
 }
 
 #banner-content .images {
+  z-index: 1;
   width: 100%;
   position: relative;
 }
@@ -217,7 +218,8 @@ div#submenu li {
 #banner img.message {
   position: absolute;
   z-index: 1000;
-  left: 600px;
+  left: 50%;
+  top: 0;
 }
 
 #banner img.message.left {
