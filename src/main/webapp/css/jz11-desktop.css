@@ -102,80 +102,6 @@ div#submenu li {
 /* BANNER             */
 /* ################## */
 
-/*#banner {
-  position: absolute;
-  width: 100%;
-  overflow: hidden;
-  height: 459px;
-}
-
-#banner-content {
-  z-index: 2;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  height: 459px;
-  width: 1183px;
-  margin-left: -592px;
-}
-
-#banner-content .images {
-  width: 100%;
-  position: relative;
-}
-
-#banner-content .images li {
-  float: left;
-  margin: 0;
-  padding: 0;
-}
-
-#banner-content .images li.left {
-  top: 0;
-  left: -1183px;
-  display: block;
-}
-
-#banner-content .images li.right {
-  left: 1183px;
-}
-
-#banner-content img {
-  position: absolute;
-}
-
-#banner img.message {
-  z-index: 100;
-  position: absolute;
-  left: 50%;
-  margin-left: 0;
-}
-
-#banner .message.left {
-  float: left;
-}
-
-.btn-nav {
-  cursor: pointer;
-  z-index: 101;
-}
-
-#banner #prev {
-  position: absolute;
-  left: 0;
-  top: 188px;
-}
-
-#banner #next {
-  position: absolute;
-  right: 0;
-  top: 188px;
-}*/
-
-/* ################## */
-/* BANNER             */
-/* ################## */
-
 #banner {
   position: absolute;
   width: 100%;
@@ -222,22 +148,20 @@ div#submenu li {
   top: 0;
 }
 
-#banner img.message.left {
-  /*float: left;*/
-}
-
 .btn-nav {
   cursor: pointer;
 }
 
 #banner #prev {
   position: absolute;
+  z-index: 1000;
   left: 0;
   top: 188px;
 }
 
 #banner #next {
   position: absolute;
+  z-index: 1000;
   right: 0;
   top: 188px;
 }
