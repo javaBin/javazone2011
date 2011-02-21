@@ -511,3 +511,8 @@ hr {
   float: right;
   padding-bottom: 0.7em;
 }
+
+
+#partner-logos img {
+  padding: 1px 5px 0 0;
+}
