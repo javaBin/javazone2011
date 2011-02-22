@@ -70,14 +70,6 @@ $(document).ready(function() {
     }
   });
 
-  /* banner navigation */
-  $('#prev').click(function() {
-    console.log('prev');
-  });
-  $('#next').click(function() {
-    console.log('next');
-  });
-
   /* Sort partner logos */
   var partnerLogos = $("#partner-logos");
   var elems = partnerLogos.children("a");
@@ -91,4 +83,26 @@ $(document).ready(function() {
       partnerLogos.append(elems[i]);
     }
   }
+
+  /* dumb banner carousel*/
+  $('#prev').click(function() {
+    var slides = $('ol.images');
+    var prev = slides.find('li.prev');
+    var curr = slides.find('li.curr');
+    var next = slides.find('li.next');
+    prev.fadeOut().removeClass().addClass('curr').fadeIn();
+    curr.fadeOut().removeClass().addClass('next').fadeIn();
+    next.fadeOut().removeClass().addClass('prev').fadeIn();
+  });
+
+  $('#next').click(function() {
+    var slides = $('#banner-content');
+    var prev = slides.find('li.prev');
+    var curr = slides.find('li.curr');
+    var next = slides.find('li.next');
+    prev.fadeOut().removeClass().addClass('next').fadeIn();
+    curr.fadeOut().removeClass().addClass('prev').fadeIn();
+    next.fadeOut().removeClass().addClass('curr').fadeIn();
+  });
+
 });

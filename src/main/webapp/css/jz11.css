@@ -92,13 +92,13 @@ h1 {
   color: #eb0c8b;
   font: bolder 44px/46px Helvetica Neue, Helvetica, Verdana, Arial, sans-serif;
   padding-bottom: 15px;
-  margin-bottom: 22px;
+  margin-bottom: 10px;
   border-bottom: 8px solid #303030;
 }
 
 h2 {
-  font: lighter 28px/30px Helvetica Neue, Helvetica, Verdana, Arial, sans-serif;
-  padding: 20px 0;
+  font: lighter 24px/26px Helvetica Neue, Helvetica, Verdana, Arial, sans-serif;
+  padding: 8px 0 12px 0;
 }
 
 h3 {
@@ -115,7 +115,7 @@ a:hover {
 }
 
 p {
-  margin-bottom: 18px;
+  margin-bottom: 10px;
 }
 
 /* ################## */
@@ -143,116 +143,6 @@ a.logo {
   float: left;
   cursor: pointer;
   z-index: 100;
-}
-
-/* Mainmenu start */
-
-div#mainmenu ul {
-  margin-right: -16px;
-  margin-top: 20px;
-  float: right;
-  list-style: none;
-  overflow: hidden;
-}
-
-div#mainmenu li {
-  display: block;
-  line-height: 64px;
-  float: left;
-  margin: 0;
-  background: url(/css/gfx/menu-inactive.png) no-repeat left bottom;
-}
-
-div#mainmenu li:first-child {
-  background: transparent;
-}
-
-div#mainmenu li:hover:first-child, div#mainmenu li.active:first-child {
-  background: url(/css/gfx/menu-active-first.png) no-repeat left bottom;
-}
-
-div#mainmenu li:hover, div#mainmenu li.active {
-  background: url(/css/gfx/menu-active.png) no-repeat left bottom;
-}
-
-div#mainmenu a {
-  display: block;
-  color: #b6b2b5;
-  font-size: 14px;
-  padding: 0 15px 0 16px;
-}
-
-div#mainmenu a:hover,
-div#mainmenu .active a {
-  color: #eb0c8b;
-  text-decoration: none;
-}
-
-/* ################## */
-/* BANNER             */
-/* ################## */
-
-#banner {
-  position: absolute;
-  width: 100%;
-  overflow: hidden;
-}
-
-#banner-content {
-  top: 84px;
-  height: 459px;
-  width: 1183px;
-  margin: 0 auto;
-}
-
-#banner-content .images {
-  width: 100%;
-  position: relative;
-}
-
-#banner-content .images li {
-  position: absolute;
-  margin: 0;
-  padding: 0;
-}
-
-#banner-content .images li.left {
-  top: 0;
-  left: -1183px;
-  display: block;
-}
-
-#banner-content .images li.right {
-  left: 1183px;
-}
-
-#banner-content img {
-  position: absolute;
-}
-
-#banner-content img.message {
-  z-index: 2;
-  left: 600px;
-}
-
-#banner-content .message.left {
-  float: left;
-}
-
-.btn-nav {
-  cursor: pointer;
-}
-
-#banner #prev {
-  position: absolute;
-  left: 0;
-  top: 188px;
-}
-
-#banner #next {
-  position: absolute;
-  right: 0;
-  top: 188px;
 }
 
 /* ################## */
@@ -313,62 +203,10 @@ div#footer li:first-child {
 
 div#footer img {
   padding: 0 0 0 9px;
+  vertical-align: middle;
 }
 
 div#footer li {
-  background: url(/css/gfx/submenu-split.png) no-repeat left center;
-}
-
-/* submenu */
-
-div#submenu {
-  color: #b6b2b5;
-  margin: 16px 0;
-  width: 100%;
-  height: 33px;
-  border-top: 1px solid #303030;
-  border-bottom: 1px solid #303030;
-}
-
-div#submenu span {
-  display: block;
-  float: left;
-  padding-top: 8px;
-  margin-right: 8px;
-  font: italic lighter 14px Helvetica Neue, Helvetica, Verdana, Arial, sans-serif;
-}
-
-div#submenu a {
-  font: normal lighter 14px Helvetica Neue, Helvetica, Verdana, Arial, sans-serif;
-  line-height: 2;
-  color: #eb0c8b;
-  padding: 0 15px 0 16px;
-}
-
-div#submenu a:hover {
-  color: #eb0c8b;
-  text-decoration: underline;
-}
-
-div#submenu ul {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  overflow: hidden;
-}
-
-div#submenu li {
-  display: block;
-  line-height: 32px;
-  float: left;
-  margin: 0;
-}
-
-div#submenu li:first-child {
-  background: transparent;
-}
-
-div#submenu li {
   background: url(/css/gfx/submenu-split.png) no-repeat left center;
 }
 
@@ -671,4 +509,9 @@ hr {
   width: 66px;
   float: right;
   padding-bottom: 0.7em;
+}
+
+
+#partner-logos img {
+  padding: 1px 5px 0 0;
 }

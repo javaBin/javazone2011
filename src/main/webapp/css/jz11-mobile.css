@@ -1,0 +1,16 @@
+body { font-size: 20px; }
+div#header { min-width: 84px; width: 100%; margin: 0; }
+div#header-content { display:block; width: 100%; }
+div#header-content img { margin-left: 15px; }
+div#mainmenu { margin-top: 20px }
+div#mainmenu, div#submenu { float:left; margin: 10px 0; width: 100%}
+div#mainmenu ul, div#submenu ul { display:block; list-style: none; }
+div#mainmenu li, div#submenu li, div#submenu span { float: left; display: block; margin: 0; }
+div#mainmenu li, div#submenu li { padding: 0 10px; }
+div#banner { display: none; }
+div#content { top: 0; max-width: 98%; padding: 0 1%;}
+div#main { float: left; width: 100%;}
+div#sidebar { float: left; padding-top: 10px; width: 96%; }
+div#twitter { width: 100%; }
+div#twitter .twitted { width: 100%; }
+div#footer { width: 98%; top: 0; }
