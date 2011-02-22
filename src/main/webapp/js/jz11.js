@@ -44,6 +44,7 @@ _gaq.push(['_trackPageview']);
 
 $(document).ready(function() {
   /* jQuery twitter */
+  /*
   $("#twitter").getTwitter({
     userName: "javazone",
     numTweets: 5,
@@ -55,6 +56,7 @@ $(document).ready(function() {
     showProfileLink: true,
     showTimestamp: true
   });
+  */
 
   /* jQuery lightbox */
   $(function() {

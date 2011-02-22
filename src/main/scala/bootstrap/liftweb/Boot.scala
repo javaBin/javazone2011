@@ -2,17 +2,19 @@ package bootstrap.liftweb
 
 import code.snippet._
 import java.io.File
-import java.net.URL
+import java.util.concurrent.ScheduledFuture
+import java.net.{URI, URL}
+import javazone2011.{TwitterClient, TwitterClientActor}
 import net.liftweb.common._
 import net.liftweb.http._
 import net.liftweb.sitemap._
 import net.liftweb.util._
+import net.liftweb.sitemap.Loc._
 import no.arktekk.cms.{Logger => CmsLogger, _}
 import no.arktekk.push._
-import scala.util.Random
-import net.liftweb.sitemap.Loc._
 import no.javabin.atom2twitterpublish.Atom2TwitterSync
-import java.util.concurrent.ScheduledFuture
+import org.joda.time.Minutes._
+import scala.util.Random
 
 class Boot {
   def boot {
@@ -42,8 +44,17 @@ class Boot {
       cmsClient.close
     })
 
+    // Twitter searc integration
+    println("Props.get(twitter.search)=" + Props.get("twitter.search"))
+    val searchUri = new URI(Props.get("twitter.search").open_!)
+    val logger = Logger("twitter.client")
+    val twitterClient = new TwitterClientActor(logger, minutes(1), searchUri)
+    twitterClient ! TwitterClient.Update
+    twitterClient.start
+    logger.info("Starting twitter search: " + searchUri)
+
     LiftRules.snippetDispatch.append({
-      case "jz" => new JavaZonePagesSnippet(cmsClient)
+      case "jz" => new JavaZonePagesSnippet(cmsClient, twitterClient)
     })
 
     LiftRules.statelessRewrite.append(pageRewriter(cmsClient))

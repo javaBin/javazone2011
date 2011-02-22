@@ -5,3 +5,5 @@ atomtwitterfeed_consumer_secret=b0vbz9kCZxVJa2KMQMVfe1h89CCbMuq70vRLlbnlDU
 atomtwitterfeed_access_token=224252297-4x11fXNl6Ams0S1vChvcBBx3TXucCEKV1LXHShbD
 atomtwitterfeed_access_secret=nGX3DSYpftUxTpJENAVXLnjkYYRX8ySgGvXmFQzYc
 atomtwitterfeed_twitter_handle=test3141592654
+
+twitter.search=http://search.twitter.com/search.atom?q=%23javazone+OR+from:javazone
