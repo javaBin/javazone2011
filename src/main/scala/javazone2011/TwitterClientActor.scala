@@ -24,6 +24,8 @@ trait TwitterSearch {
 
 class TwitterClientActor(logger: Logger, timeout: Minutes, uri: URI) extends Actor with TwitterSearch {
 
+  private val NUMBER_OF_TWEETS_TO_SHOW = 7
+
   private val abderaClient = new AbderaClient()
 
   var currentResults: List[JzTweet] = Nil
@@ -62,7 +64,7 @@ class TwitterClientActor(logger: Logger, timeout: Minutes, uri: URI) extends Act
           case "application/atom+xml" =>
             val root = clientResponse.getDocument[Feed].getRoot
 //            logger.info("Got " + root.getEntries.size + " entries in feed")
-            val x = TwitterClient.handleFeed(new DT(), root)
+            val x = TwitterClient.handleFeed(new DT(), root).take(NUMBER_OF_TWEETS_TO_SHOW)
 //            logger.info("Got " + x.length + " tweets from feed")
             currentResults = x
             searchUrlHtml = TwitterClient.findLinkByRel(asScalaIterable(root.getLinks), "alternate")
