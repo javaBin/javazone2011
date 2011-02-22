@@ -13,6 +13,7 @@ class JavaZonePagesSnippet(val cmsClient: CmsClient, val twitterSearch: TwitterS
   val dispatch: DispatchIt = {
     case "topPages" => topPages _
     case "tweets" => tweets _
+    case "moreTweets" => moreTweets _
   }
 
   def topPages(body: NodeSeq): NodeSeq =
@@ -28,12 +29,15 @@ class JavaZonePagesSnippet(val cmsClient: CmsClient, val twitterSearch: TwitterS
       {twitterSearch.currentResults.map(tweetToLi(_))}
     </ul>
 
-  def tweetToLi(tweet: JzTweet): NodeSeq =
+  private def tweetToLi(tweet: JzTweet): NodeSeq =
     <li>
-      <span class="tweet_handle">{tweet.handle}</span>:
-      <span class="tweet_text">{tweet.text}</span>
-      {tweet.timeAgo} &#183; <a class="tweet_link" href={tweet.htmlLink.toString}>View Tweet</a>
+      <span class="handle"><a href={tweet.handleUrl.toExternalForm}>{tweet.handle}</a></span>:
+      <span class="text">{tweet.text}</span><br/>
+      <span class="meta">{tweet.timeAgo} &#183; <a class="tweet_link" href={tweet.htmlLink.toString}>View Tweet</a></span>
     </li>
+
+  def moreTweets(body: NodeSeq): NodeSeq =
+    twitterSearch.searchUrlHtml.map(url => <a href={url.toExternalForm}>More...</a>).getOrElse(NodeSeq.Empty)
 }
 
 object JavaZonePagesSnippet {

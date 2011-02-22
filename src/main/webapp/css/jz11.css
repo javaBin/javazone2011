@@ -520,7 +520,6 @@ hr {
 
 .twitted ul#twitter_update_list li span {
 /* tweet content */
-  display: block;
 }
 
 .twitted ul#twitter_update_list li span a {
