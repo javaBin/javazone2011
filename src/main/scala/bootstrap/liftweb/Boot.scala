@@ -48,9 +48,10 @@ class Boot {
       cmsClient.close
     })
 
-    LiftRules.snippetDispatch.append({
+    LiftRules.snippetDispatch.append{
       case "jz" => new JavaZonePagesSnippet(cmsClient)
-    })
+      case "banner" => new BannerSnippet
+    }
 
     LiftRules.statelessRewrite.append(pageRewriter(cmsClient))
 
