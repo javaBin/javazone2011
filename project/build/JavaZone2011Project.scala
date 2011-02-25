@@ -10,9 +10,10 @@ class JavaZone2011Project(info: ProjectInfo) extends DefaultWebProject(info) wit
 
   val scalaReleasesRepo = "scala-releases" at "http://scala-tools.org/repo-releases"
   val ocRepo = "oc" at "http://bring.ewok.no/nexus/content/repositories/oc"
-//  val arktekkRepo = "arktekk" at "http://dev.eventsystems.no/nexus/content/repositories/arktekk-public-snapshot"
+  //  val arktekkRepo = "arktekk" at "http://dev.eventsystems.no/nexus/content/repositories/arktekk-public-snapshot"
   val javaBinRepo = "javabin" at "http://smia.java.no/maven/repo/snapshot"
   Credentials(Path.userHome / ".ivy2" / "javabin.properties", log)
+
   /*
   Your ~/.ivy2/javabin.properties must contain:
   host=smia.java.no
