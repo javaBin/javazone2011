@@ -516,3 +516,12 @@ hr {
 #partner-logos img {
   padding: 1px 5px 0 0;
 }
+
+div.person {
+  width: 150px;
+  float: left;
+}
+
+.popup {
+  display: none;
+}

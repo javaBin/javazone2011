@@ -68,6 +68,11 @@ $(document).ready(function() {
     }
   });
 
+  $('.person').CreateBubblePopup({
+      innerHtml: $(this).find(".popup").html(),
+      themePath: "/images/jquerybubblepopup-theme/"
+  });
+
   /* Sort partner logos */
   var partnerLogos = $("#partner-logos");
   var elems = partnerLogos.children("a");
