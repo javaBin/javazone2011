@@ -526,6 +526,9 @@ div.person {
     margin-bottom: 5px;
 }
 
+.person img {
+    width: 202px;
+}
 .popup {
   display: none;
 }
