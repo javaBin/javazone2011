@@ -21,3 +21,4 @@ src_managed
 target
 db
 logging.properties
+.DS_Store
