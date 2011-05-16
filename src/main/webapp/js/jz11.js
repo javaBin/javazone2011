@@ -43,6 +43,18 @@ _gaq.push(['_trackPageview']);
 /* Dependents on jQuery */
 
 $(document).ready(function() {
+
+  $(".person").tooltip({
+    bodyHandler: function() {
+      return $(this).find(".popup").html();
+    },
+    extraClass: "pretty",
+    showURL: false
+  });
+
+  $(".wrapper").randomize(".person");
+
+
   /* jQuery twitter */
   $("#twitter").getTwitter({
     userName: "javazone",
@@ -68,10 +80,6 @@ $(document).ready(function() {
     }
   });
 
-  $('.person').CreateBubblePopup({
-      innerHtml: $(this).find(".popup").html(),
-      themePath: "/images/jquerybubblepopup-theme/"
-  });
 
   /* Sort partner logos */
   var partnerLogos = $("#partner-logos");
@@ -109,3 +117,22 @@ $(document).ready(function() {
   });
 
 });
+
+
+(function($) {
+
+  $.fn.randomize = function(childElem) {
+    return this.each(function() {
+      var $this = $(this);
+      var elems = $this.children(childElem);
+
+      elems.sort(function() { return (Math.round(Math.random())-0.5); });
+
+      $this.remove(childElem);
+
+      for(var i=0; i < elems.length; i++)
+      $this.append(elems[i]);
+
+    });
+  }
+})(jQuery);
