@@ -1,3 +1,22 @@
+(function($) {
+
+  $.fn.randomize = function(childElem) {
+    return this.each(function() {
+      var $this = $(this);
+      var elems = $this.children(childElem);
+
+      elems.sort(function() { return (Math.round(Math.random())-0.5); });
+
+      $this.remove(childElem);
+
+      for(var i=0; i < elems.length; i++)
+      $this.append(elems[i]);
+
+    });
+  }
+})(jQuery);
+
+
 /* disqus */
 var disqus_developer = 0; // Set to 1 for local debugging
 
@@ -52,24 +71,24 @@ $(document).ready(function() {
     showURL: false
   });
 
-  $(".wrapper").randomize(".person");
+  $("#people").randomize(".person");
 
 
   /* jQuery twitter */
-  $("#twitter").getTwitter({
-    userName: "javazone",
-    numTweets: 5,
-    loaderText: "Loading tweets...",
-    slideIn: true,
-    slideDuration: 750,
-    showHeading: false,
-    headingText: "Latest Tweets",
-    showProfileLink: true,
-    showTimestamp: true
-  });
-
   /* jQuery lightbox */
-  $(function() {
+
+            $("#twitter").getTwitter({
+                        userName: "javazone",
+                        numTweets: 5,
+                        loaderText: "Loading tweets...",
+                        slideIn: true,
+                        slideDuration: 750,
+                        showHeading: false,
+                        headingText: "Latest Tweets",
+                        showProfileLink: true,
+                        showTimestamp: true
+                    });
+            $(function() {
     $('a.lightbox').lightBox(); // Select all links with lightbox class
   });
 
@@ -118,21 +137,3 @@ $(document).ready(function() {
 
 });
 
-
-(function($) {
-
-  $.fn.randomize = function(childElem) {
-    return this.each(function() {
-      var $this = $(this);
-      var elems = $this.children(childElem);
-
-      elems.sort(function() { return (Math.round(Math.random())-0.5); });
-
-      $this.remove(childElem);
-
-      for(var i=0; i < elems.length; i++)
-      $this.append(elems[i]);
-
-    });
-  }
-})(jQuery);

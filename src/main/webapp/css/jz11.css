@@ -528,7 +528,10 @@ div.person {
 
 .person img {
     width: 202px;
+    height: 142px;
+    overflow: hidden;
 }
+
 .popup {
   display: none;
 }
